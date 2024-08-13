@@ -9,7 +9,7 @@ const AnimeList = ({ api }) => {
         return (
           <Link
             href={`/${anime.mal_id}`}
-            className="cursor-pointer"
+            className="cursor-pointer text-color-primary hover:text-color-accent transition-all"
             key={anime.mal_id}
           >
             <Image
@@ -19,7 +19,7 @@ const AnimeList = ({ api }) => {
               height={350}
               className="w-full max-h-64 object-cover"
             />
-            <h3 className="md:text-xl text-base font-bold p-4">
+            <h3 className="md:text-xl text-base font-bold p-4 ">
               {anime.title}
             </h3>
           </Link>
