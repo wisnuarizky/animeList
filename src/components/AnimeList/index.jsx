@@ -5,7 +5,7 @@ import Header from "./Header";
 const AnimeList = ({ api }) => {
   return (
     <div className="grid grid-cols-2 gap-4 px-4 md:grid-cols-4 sm:grid-cols-3">
-      {api.data.map((anime) => {
+      {api.data?.map((anime) => {
         return (
           <Link
             href={`/${anime.mal_id}`}
@@ -18,6 +18,7 @@ const AnimeList = ({ api }) => {
               width={350}
               height={350}
               className="w-full max-h-64 object-cover"
+              priority={true}
             />
             <h3 className="md:text-xl text-base font-bold p-4 ">
               {anime.title}
